@@ -1,0 +1,98 @@
+{
+    "strategies": [
+      {
+        "id": 1,
+        "title": "Alteration in sizes",
+        "status": "ACTIVE",
+        "year": "2025",
+        "actions": [
+          {
+            "description": "Make the sizes consistent",
+            "completed": true
+          },
+          {
+            "description": "Add more sizes",
+            "completed": true
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Enhance Customer Support",
+        "status": "INACTIVE",
+        "year": "2024",
+        "actions": [
+          {
+            "description": "24/7 chat support",
+            "completed": false
+          },
+          {
+            "description": "Automated responses",
+            "completed": true
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Optimize Pricing Strategy",
+        "status": "ACTIVE",
+        "year": "2025",
+        "actions": [
+          {
+            "description": "Seasonal Discounts",
+            "completed": true
+          },
+          {
+            "description": "Customer Loyalty Program",
+            "completed": false
+          }
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "label": "Immediate Action",
+        "count": 7,
+        "bgColor": "bg-purple-100"
+      },
+      {
+        "label": "High Priority",
+        "count": 3,
+        "bgColor": "bg-pink-100"
+      },
+      {
+        "label": "Potential Issues",
+        "count": 2,
+        "bgColor": "bg-blue-100"
+      }
+    ],
+    "analyzedPoints": [
+      {
+        "issue": "Inconsistent Sizing",
+        "type": "Priority",
+        "reason": "Low Sales",
+        "detailsType": "view"
+      },
+      {
+        "issue": "Hike in prices",
+        "type": "Priority",
+        "reason": "Low Sales",
+        "detailsType": "view"
+      }
+    ],
+    "tasks": [
+      {
+        "label": "Target's Completed",
+        "count": 4,
+        "actionType": "Report",
+        "iconColor": "bg-blue-100"
+      },
+      {
+        "label": "Issue's Resolved",
+        "count": 2,
+        "actionType": "Report",
+        "iconColor": "bg-red-100"
+      }
+    ]
+  }
+  
