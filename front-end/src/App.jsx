@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import ThemeProvider from './utils/ThemeContext';
 import TemplateSelection from './components/FormBuilder/TemplateSelection';
 import DataTable from './components/DataTable';
 import FormBuilder from './components/FormBuilder/FormBuilder';
@@ -11,6 +12,10 @@ import Dashboard from './pages/Dashboard';
 import Feedback from './pages/Feedback';
 import LandingPage from './pages/LandingPage'; 
 import FormCreation from "./pages/FormCreation";
+import AIFormCreation from "./pages/AIFormCreation";
+import AIFormFill from "./pages/AIFormFill";
+import FormReports from "./pages/FormReports";
+import FormStrategy from "./pages/FormStrategy";
 
 const ScrollToTop = () => {
   const location = useLocation();
@@ -25,25 +30,27 @@ const ScrollToTop = () => {
 
 const App = () => {
   return (
-    <Router>
-      <ScrollToTop /> {/* Ensure scroll resets on route change */}
-      <div className="flex h-screen bg-gray-50">
-        <div className="flex-1">
-          <Routes>
-            <Route path="/MainDashboard" element={<MainDashboard />} />
-            <Route path="/templateSelection" element={<TemplateSelection />} />
-            <Route path="/preview" element={<TemplatePreview />} />
-            <Route path="/workspace/:id" element={<DataTable />} />
-            <Route path="/form-builder" element={<FormBuilder />} />
-            {/* <Route path="/" element={<Dashboard />} /> */}
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/feedback" element={<Feedback />} />
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/form-creation" element={<FormCreation/>} />
-          </Routes>
-        </div>
-      </div>
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <ScrollToTop /> {/* Ensure scroll resets on route change */}
+        <Routes>
+          <Route path="/MainDashboard" element={<MainDashboard />} />
+          <Route path="/templateSelection" element={<TemplateSelection />} />
+          <Route path="/preview" element={<TemplatePreview />} />
+          <Route path="/workspace/:id" element={<DataTable />} />
+          <Route path="/form-builder" element={<FormBuilder />} />
+          {/* <Route path="/" element={<Dashboard />} /> */}
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/feedback" element={<Feedback />} />
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/form-creation" element={<FormCreation/>} />
+          <Route path="/ai-form-creation" element={<AIFormCreation />} />
+          <Route path="/ai-form/:formId" element={<AIFormFill />} />
+          <Route path="/form/:formId/reports" element={<FormReports />} />
+          <Route path="/form/:formId/strategy" element={<FormStrategy />} />
+        </Routes>
+      </Router>
+    </ThemeProvider>
   );
 };
 

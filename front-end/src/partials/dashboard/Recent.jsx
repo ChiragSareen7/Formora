@@ -2,7 +2,7 @@ import React from 'react';
 
 function DashboardCard12({ feedbacks = [], highPriority = [] }) {
   // Hardcoded icon (applies to all feedback items)
-  const feedbackIcon = "M18 8C12.477 8 8 12.477 8 18s4.477 10 10 10 10-4.477 10-10-10z";
+  const feedbackIcon = "M18 8C12.477 8 8 12.477 8 18s4.477 10 10 10 10-4.477 10-10S23.523 8 18 8z";
 
   return (
     <div className="col-span-full xl:col-span-6 bg-white dark:bg-gray-800 shadow-xs rounded-xl">

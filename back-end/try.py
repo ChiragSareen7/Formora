@@ -124,7 +124,7 @@ Make sure the response follows **exactly** the JSON format above. Only return th
 
     try:
         response = client.chat.completions.create(
-            model="llama3-8b-8192",
+            model="llama-3.1-8b-instant",
             messages=[{"role": "system", "content": prompt},
                       {"role": "user", "content": formatted_feedback}],
             temperature=0.2

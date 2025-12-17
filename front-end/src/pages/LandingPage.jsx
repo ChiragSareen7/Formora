@@ -39,7 +39,8 @@ import {
 import { motion } from 'framer-motion';
 import { Close, CheckCircle } from '@mui/icons-material';
 import styled, { keyframes } from 'styled-components';
-import axios from 'axios'; 
+import axios from 'axios';
+import { buildApiUrl } from '../config/api';
 import { useNavigate } from 'react-router-dom';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
@@ -240,7 +241,7 @@ const LandingPage = () => {
 
         try {
           const dobFormatted = moment(signupDob).format('YYYY-MM-DD');
-            const response = await axios.post('http://localhost:8080/api/signup', {
+            const response = await axios.post(buildApiUrl('/api/signup'), {
                 name: signupName,
                 username: signupUsername,
                 email: signupEmail,
@@ -271,7 +272,7 @@ const LandingPage = () => {
         }
 
         try {
-            const response = await axios.post('http://localhost:8080/api/login', {
+            const response = await axios.post(buildApiUrl('/api/login'), {
                 email: loginEmail,
                 password: loginPassword
             });

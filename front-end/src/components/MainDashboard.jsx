@@ -69,12 +69,21 @@ const FormDashboard = () => {
         >
             <div>  {/* Content Section for the actual sidebar links and info */}
                 <motion.button
-                    className="w-full flex items-center gap-2 p-3 bg-purple-600 text-black rounded-lg shadow hover:bg-purple-700 transition mb-4"
+                    className="w-full flex items-center gap-2 p-3 bg-purple-600 text-white rounded-lg shadow hover:bg-purple-700 transition mb-3"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     onClick={handleCreateForm}
                 >
                     <Plus className="h-4 w-4" /> Create a new form
+                </motion.button>
+                
+                <motion.button
+                    className="w-full flex items-center gap-2 p-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg shadow hover:from-purple-600 hover:to-blue-600 transition mb-4"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={() => navigate('/ai-form-creation')}
+                >
+                    <Sparkles className="h-4 w-4" /> Create AI Form
                 </motion.button>
 
                 <div className="relative mb-6">

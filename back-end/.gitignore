@@ -1,4 +1,19 @@
-/node_modules
+# Virtual Environment
+venv/
+env/
+.venv/
+
+# Environment variables
 .env
-package-lock.json
-Pipfile.lock
+
+# Node modules
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+back-end/.env
